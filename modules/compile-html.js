@@ -29,8 +29,6 @@ var layout = (function (path) {
   return handlebars.compile(data);
 }(path.join(__dirname, '../src/templates/layout.html')));
 
-// get
-
 // write the files
 function write(file, dest) {
   fs.readFile(__dirname + '/../src/html/' + file, {encoding: 'utf8'}, function (err, data) {
