@@ -1,0 +1,52 @@
+%img-cap {
+  position: relative;
+  margin: 10px 0;
+  img {
+    max-width: 100%;
+    vertical-align: text-top;
+  }
+  &:before {
+    font-size: .8em;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 5px 10px;
+    background: rgba(0,0,0,.4);
+    content: attr(data-caption);
+    color: #f0f0f0;
+  }
+}
+
+.img-cap-fl {
+  @extend %img-cap;
+  @include bp(max-width $main-width) {
+    width: 100%;
+    float: none;
+    margin: 10px 0;
+  }
+}
+
+.img-cap-lh {
+  @extend %img-cap;
+  width: 50%;
+  float: left;
+  margin: 10px 10px 10px 0;
+  @include bp(max-width $main-width) {
+    width: 100%;
+    float: none;
+    margin: 10px 0;
+  }
+}
+
+.img-cap-rh {
+  @extend %img-cap;
+  width: 50%;
+  float: right;
+  margin: 10px 0 10px 10px;
+  @include bp(max-width $main-width) {
+    width: 100%;
+    float: none;
+    margin: 10px 0;
+  }
+}

@@ -1,0 +1,14 @@
+.article {
+  @inclue cf;
+  h2 {
+    font-size: 1.5em;
+    .sub-txt {
+      font-weight: normal;
+      font-size: .5em;
+    }
+    margin: 0 0 10px 0;
+  }
+  p {
+    margin: 10px 0;
+  }
+}

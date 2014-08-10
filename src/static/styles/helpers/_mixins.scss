@@ -1,0 +1,20 @@
+// Micro Clearfix
+// http://nicolasgallagher.com/micro-clearfix-hack/
+// @include cf;
+@mixin cf() {
+  *zoom: 1;
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin bp($query) {
+  @media screen and (#{nth($query, 1)}: #{nth($query, 2)}) {
+    @content
+  }
+}
